@@ -37,7 +37,7 @@
     </script>
 
     <div id="app-3">
-        <span v-if="seen">Ahora me ves</span>
+        <span v-show="seen">Ahora me ves</span>
     </div>
 
     <script>
@@ -51,7 +51,7 @@
 
     <div id="app-4">
         <ol>
-            <li v-for="todo in todos">
+            <li v-for="todo in todos" :key="todo.text">
                 {{ todo.text }}
             </li>
         </ol>
